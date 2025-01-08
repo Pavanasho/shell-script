@@ -3,10 +3,10 @@
 
 echo "Please enter username : "
 
-read Username
+read -s username
 
-echo "username entered : $Username"
+echo "Username entered : $username"
 
 echo "Please enter passward : "
 
-read passward
+read -s passward
