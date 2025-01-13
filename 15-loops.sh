@@ -37,11 +37,11 @@ CHECK_ROOT
 
 for package in $@
 do
-    dnf list installed $package
+    dnf list installed $package &>> $LOG_FILE_NAME
 
     if [ $? -ne 0 ]
     then
-        dnf install $package -y
+        dnf install $package -y &>> $LOG_FILE_NAME
         VALIDATE $? "Installing $package"
     else
         echo "$package is already installed"
