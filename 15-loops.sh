@@ -14,9 +14,9 @@ LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 VALIDATE (){
     if [ $1 -ne 0 ]
     then    
-        echo "$2 ... $R FAILURE $N"
+        echo -e "$2 ... $R FAILURE $N"
     else 
-        echo "$2 ... $G SUCCESS $N"
+        echo -e "$2 ... $G SUCCESS $N"
     fi    
 }
 
@@ -44,7 +44,7 @@ do
         dnf install $package -y &>> $LOG_FILE_NAME
         VALIDATE $? "Installing $package"
     else
-        echo "$package is already $R installed $N"
+        echo -e "$package is already $R installed $N"
     fi        
 done
 
