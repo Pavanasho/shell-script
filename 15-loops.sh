@@ -20,6 +20,8 @@ VALIDATE (){
     fi    
 }
 
+mkdir -p /var/log/shellscript-logs
+
 echo "Executing starting at: $TIMESTAMP " &>> $LOG_FILE_NAME
 
 CHECK_ROOT (){
