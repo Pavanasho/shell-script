@@ -53,7 +53,7 @@ then
         echo -e "Successfully created zip file for files older than $DAYS"
         while read -r filepath
         do
-            echo "Deleting file: $filepath"
+            echo "Deleting file: $filepath" &>> $LOG_FILE_NAME
             rm -rf $filepath
             echo "Deleted file: $filepath"
         done <<< $FILES
