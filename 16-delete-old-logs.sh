@@ -25,4 +25,4 @@ do
     echo "Deleting file: $filepath" &>> $LOG_FILE_NAME
     
 
-done
+done <<< $FILES_TO_DELETE
